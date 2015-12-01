@@ -54,11 +54,11 @@ int main(int argc, char **argv)
 
 		if(readLine(sockfd) > 0) {
 
-			char mail[] = "MAIL FROM: <sender>\r\n";
+			char mail[] = "MAIL FROM: <cindy.lou@gmail.com>\r\n";
 			Write(sockfd, mail, strlen(mail));
 
 			if(readLine(sockfd) > 0 ) {
-				char recep[] = "RCPT TO: <receiver>\r\n";
+				char recep[] = "RCPT TO: <stephenfox995@gmail.com>\r\n";
 				Write(sockfd, recep, strlen(recep));
 
 				if(readLine(sockfd) > 0)  {
@@ -67,19 +67,19 @@ int main(int argc, char **argv)
 
 					if(readLine(sockfd) > 0) {
 
-						char dataRec1[] = "From: sender email\r\n";
+						char dataRec1[] = "From: cindy.lou@gmail.com\r\n";
 						Write(sockfd, dataRec1, strlen(dataRec1));
 
-						char dataRec2[] = "To: receiver email\r\n";
+						char dataRec2[] = "To: stephenfox995@gmail.com\r\n";
 						Write(sockfd, dataRec2, strlen(dataRec2));
 
-						char dataRec3[] = "Subject: \r\n";
+						char dataRec3[] = "Subject: Cindy Lou\r\n";
 						Write(sockfd, dataRec3, strlen(dataRec3));
 
 						char dataRec4[] = "\r\n";
 						Write(sockfd, dataRec4, strlen(dataRec4));
 
-						char dataRec5[] = "Body Text\r\n";
+						char dataRec5[] = "I have kinky boots and lookign for some fun\r\n";
 						Write(sockfd, dataRec5, strlen(dataRec5));
 
 						char value1[] = "\r\n";
